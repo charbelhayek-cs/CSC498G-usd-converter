@@ -29,7 +29,7 @@
         android:layout_marginEnd="171dp"
         android:layout_marginBottom="275dp"
         android:onClick="login"
-        android:text="login"
+        android:text="convert"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -73,32 +73,32 @@
         app:layout_constraintTop_toBottomOf="@+id/USD" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="70"
+        android:id="@+id/imageView4"
+        android:layout_width="120px"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="323dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintEnd_toStartOf="@+id/LBP"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/LB_flag" />
+        app:srcCompat="@drawable/lbp_flag" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="70"
+        android:id="@+id/imageView5"
+        android:layout_width="120px"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="407dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/USD"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.042"
-        app:srcCompat="@drawable/USA_flag" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        app:srcCompat="@drawable/usa_flag" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
