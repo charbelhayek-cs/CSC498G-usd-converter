@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(!input_USD.equals("") && input_LBP.equals(""))
         {
-            Double inp_USD=Double.valueOf(input_USD);
-            double result=inp_USD*22000;
-            Toast.makeText(getApplicationContext(),"the result is: "+result+" LBP",Toast.LENGTH_LONG).show();
+                Double inp_USD = Double.parseDouble(input_USD);
+                double result = inp_USD * 22000;
+                Toast.makeText(getApplicationContext(), "the result is: " + result + " LBP", Toast.LENGTH_LONG).show();
+
         }
         else{
-            Double inp_LBP=Double.valueOf(input_LBP);
+            Double inp_LBP=Double.parseDouble(input_LBP);
             double result=inp_LBP/22000;
             Toast.makeText(getApplicationContext(),"the result is: "+result+" USD",Toast.LENGTH_LONG).show();
         }
