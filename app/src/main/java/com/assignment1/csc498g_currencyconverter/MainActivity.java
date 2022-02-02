@@ -22,23 +22,25 @@ public class MainActivity extends AppCompatActivity {
         String input_USD=USD.getText().toString();
         String input_LBP=LBP.getText().toString();
         //converting a String into a double
-        Double inp_USD=Double.valueOf(input_USD);
-        Double inp_LBP=Double.valueOf(input_LBP);
-        if(input_USD!=null && input_LBP!=null){
-            String message="Please put a number in one of the cases and not both!";
+    //    Double inp_USD=Double.valueOf(input_USD); // i commented out those two lines because of the nullpointer exception i could've handeled it by a try catch block but it will stay a logical error although it will work and everything
+       // Double inp_LBP=Double.valueOf(input_LBP);
+        if(input_USD.equals("") && input_LBP.equals("")){
+            String message="Please put a number in one of the cases you did not put any!";
             Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
         }
-        else if(input_USD==null && input_LBP==null)
+         if(!input_USD.equals("") && !input_LBP.equals(""))
         {
             String message="Please put a number in one of the cases so we can connvert";
             Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
         }
-        else if(input_USD!=null && input_LBP ==null)
+        else if(!input_USD.equals("") && input_LBP.equals(""))
         {
+            Double inp_USD=Double.valueOf(input_USD);
             double result=inp_USD*22000;
             Toast.makeText(getApplicationContext(),"the result is: "+result+" LBP",Toast.LENGTH_LONG).show();
         }
         else{
+            Double inp_LBP=Double.valueOf(input_LBP);
             double result=inp_LBP/22000;
             Toast.makeText(getApplicationContext(),"the result is: "+result+" USD",Toast.LENGTH_LONG).show();
         }
