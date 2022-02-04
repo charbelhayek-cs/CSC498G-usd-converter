@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+
 public class MainActivity extends AppCompatActivity {
+
    EditText USD;// declaring the 2 variables so that i can retrieve them
    EditText LBP;
     @Override
@@ -24,13 +27,14 @@ public class MainActivity extends AppCompatActivity {
         //converting a String into a double
     //    Double inp_USD=Double.valueOf(input_USD); // i commented out those two lines because of the nullpointer exception i could've handeled it by a try catch block but it will stay a logical error although it will work and everything
        // Double inp_LBP=Double.valueOf(input_LBP);
+        //if(input_USD.equals("") && input_LBP.equals("")){
         if(input_USD.equals("") && input_LBP.equals("")){
             String message="Please put a number in one of the cases you did not put any!";
             Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
         }
-         if(!input_USD.equals("") && !input_LBP.equals(""))
+         else if(!input_USD.equals("") && !input_LBP.equals(""))
         {
-            String message="Please put a number in one of the cases so we can connvert";
+            String message="Please put a number in one of the cases so we can convert";
             Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
         }
         else if(!input_USD.equals("") && input_LBP.equals(""))
